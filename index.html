@@ -151,6 +151,59 @@
             padding: 0 !important;
         }
     </style>
+    <style>
+        #scrollUp {
+            background: #c6a16e;
+            height: 50px;
+            width: 50px;
+            right: 31px;
+            bottom: 18px;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 48px;
+            border: 2px solid transparent;
+        }
+
+        @media (max-width: 767px) {
+            #scrollUp {
+                right: 16px;
+            }
+        }
+
+        #scrollUp:hover {
+            color: #fff;
+        }
+        #scrollUp, #back-top {
+  background: #3589f1;
+  height: 50px;
+  width: 50px;
+  right: 31px;
+  bottom: 18px;
+  position: fixed;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 48px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+}
+
+@media (max-width: 575px) {
+  /* line 433, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_common.scss */
+  #scrollUp, #back-top {
+    right: 16px;
+  }
+}
+
+/* line 450, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_common.scss */
+#scrollUp a i, #back-top a i {
+  display: block;
+  line-height: 50px;
+}
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -985,13 +1038,16 @@
                                     </div>
 
                                     <!-- back-to-top-start -->
-                                        <!-- <button href="#header" role="link"  title="Go to top of page" class="scroll-top scroll-top--active"   style="border:0; outline:none; width:48px;height: 48px; display:flex; flex-direction: column; justify-content: center; align-items: center; color:white; font:900; background: #de1717; z-index: 99;">
+                                    <!-- <button href="#header" role="link"  title="Go to top of page" class="scroll-top scroll-top--active"   style="border:0; outline:none; width:48px;height: 48px; display:flex; flex-direction: column; justify-content: center; align-items: center; color:white; font:900; background: #de1717; z-index: 99;">
                                             &#8593;
                                         </button> -->
+                                    <div id="back-top">
+
                                         <a title="Go to Top" href="#">
                                             <i class="fas fa-level-up-alt"></i>
                                         </a>
-                                        
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -4097,6 +4153,7 @@
     <script
         src="https://bracketweb.com/kidearnwp/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.8.2.1"
         id="jquery-blockui-js"></script>
+        <script src="scrollup.js"></script>
     <script id="wc-add-to-cart-js-extra">
         var wc_add_to_cart_params = {
             "ajax_url": "\/kidearnwp\/wp-admin\/admin-ajax.php",
