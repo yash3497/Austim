@@ -3032,10 +3032,10 @@
                                                         <h3 class="event-one__mail-title">Subscribe to our newsletter
                                                             for daily updates</h3>
                                                         <form id="subscriber-list" class="event-one__mail-form mc-form"
-                                                            action="https://script.google.com/macros/s/AKfycbzpGLsFhyZ7Xuoe9cfRezfIBFOxQ2Kx6N1wgQ4E9eL0CMZixWyFdZf5bPFH2SzfVxXx/exec"
-                                                            method="post" name="subscriber-list">
-                                                            <input type="email" name="subscriber-email"
-                                                                placeholder="Email address">
+                                                            action="https://script.google.com/macros/s/AKfycbxp7G5J7p8I08AhGguYqQjP7YV333X9T_R1RUxExggjK_wMhnx2mkHFFhFUAPAYBbvR/exec"
+                                                            method="POST" name="subscriber-list">
+                                                            <input type="email" name="EMAIL"
+                                                                placeholder="Email address" required>
                                                             <button type="submit" class="kidearn-btn">
                                                                 <span>Subscribe</span>
                                                             </button>
@@ -3394,10 +3394,11 @@
                                                                 </p>
                                                                 <ul></ul>
                                                             </div>
-                                                            <form action="/kidearnwp/home-three/#wpcf7-f742-p785-o1"
-                                                                method="post" class="wpcf7-form init"
+                                                            <form action="https://script.google.com/macros/s/AKfycbyYqG06myV18qRg0vmzhPOamyS21oZMOEXtv_UZuf7si8MXmYtIDoOyq2G-HVWHpjqwZg/exec"
+                                                                method="POST" class="wpcf7-form init"
                                                                 aria-label="Contact form" novalidate="novalidate"
-                                                                data-status="init">
+                                                                data-status="init"
+                                                                id="contact-form-austim">
                                                                 <div style="display: none;">
                                                                     <input type="hidden" name="_wpcf7" value="742" />
                                                                     <input type="hidden" name="_wpcf7_version"
@@ -3420,7 +3421,7 @@
                                                                                 aria-required="true"
                                                                                 aria-invalid="false"
                                                                                 placeholder="Your Name" value=""
-                                                                                type="text" name="text-404" />
+                                                                                type="text" name="Name" />
                                                                         </span>
                                                                     </div>
                                                                     <div class="form-one__control ">
@@ -3431,7 +3432,7 @@
                                                                                 aria-required="true"
                                                                                 aria-invalid="false"
                                                                                 placeholder="Email Address" value=""
-                                                                                type="email" name="email-911" />
+                                                                                type="email" name="Email" />
                                                                         </span>
                                                                     </div>
                                                                     <div class="form-one__control ">
@@ -3442,7 +3443,7 @@
                                                                                 aria-required="true"
                                                                                 aria-invalid="false"
                                                                                 placeholder="Your Phone" value=""
-                                                                                type="text" name="text-405" />
+                                                                                type="text" name="Phone" />
                                                                         </span>
                                                                     </div>
                                                                     <div class="form-one__control ">
@@ -3453,13 +3454,25 @@
                                                                                     class="wpcf7-form-control wpcf7-select selectpicker"
                                                                                     id="language-select"
                                                                                     aria-invalid="false"
-                                                                                    name="menu-262">
-                                                                                    <option value="Select Programs">
-                                                                                        Select Programs</option>
-                                                                                    <option value="Select Programs">
-                                                                                        Select Programs</option>
-                                                                                    <option value="Select Programs 02">
-                                                                                        Select Programs 02</option>
+                                                                                    name="Program">
+                                                                                    <option value="">Select Program </option>
+
+										<option value="program1">Parent Child Training</option>
+										<option value="program2">Early Intervention Program</option>
+										<option value="program3">One to One Sessions</option>
+										<option value="program1">Group Interaction</option>
+										<option value="program2">Qouss Motor Skills</option>
+										<option value="program3">Fine Motor Skills</option>
+										<option value="program1">Oral Motor Excercise</option>
+										<option value="program2">Language and Communication classes</option>
+										<option value="program3">Play and Music Therapy</option>
+										<option value="program1">Classes for regular students</option>
+										<option value="program2">Workshops for Parents</option>
+										<option value="program3">Writing Skills</option>
+										<option value="program1">Cultural Celebrations</option>
+										<option value="program2">Preparation for specail events</option>
+										<option value="program3">Holistic Approach</option>
+										<option value="program1">Special Education</option>
                                                                                 </select>
                                                                             </span>
                                                                         </div>
@@ -3473,7 +3486,7 @@
                                                                                 aria-required="true"
                                                                                 aria-invalid="false"
                                                                                 placeholder="Write a Message"
-                                                                                name="textarea-599"></textarea>
+                                                                                name="Message"></textarea>
                                                                         </span>
                                                                     </div>
                                                                     <div
@@ -4007,18 +4020,40 @@
         )();
     </script>
     <script>
-        let scriptURL = 'https://script.google.com/macros/s/AKfycbzpGLsFhyZ7Xuoe9cfRezfIBFOxQ2Kx6N1wgQ4E9eL0CMZixWyFdZf5bPFH2SzfVxXx/exec'
-
-        let form = document.querySelector("#subscriber-list");
-
-        form.addEventListener('submit', (e) => {
-            let formData = new FormData(form);
-            e.preventDefault();
-            fetch(scriptURL, { method: 'post', body: formData })
-                .then(res => res.text())
-                .then((finalRes) => console.log(finalRes))
-
-        })
+        window.addEventListener("load", function() {
+  let form = document.getElementById('subscriber-list');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Added to Subscription List!");
+      form.reset();
+    })
+  });
+});
+    </script>
+    <script>
+        window.addEventListener("load", function () {
+            const form = document.getElementById('contact-form-austim');
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        alert("Form Submitted!");
+                        form.reset();
+                    })
+            });
+        });
     </script>
     <link rel='stylesheet' id='elementor-post-213-css'
         href='https://bracketweb.com/kidearnwp/wp-content/uploads/elementor/css/post-213.css?ver=1698930312'
