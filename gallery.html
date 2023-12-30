@@ -859,6 +859,17 @@
                                 <div class="elementor-widget-container">
                                     <!-- programm -start four  -->
                                     <section class="program-page">
+                                        <div class="fullImg " id="fullImgBox"
+                                            style="width:100%;height:100vh;background:rgba(0, 0, 0, 0.9);position:fixed;top:0;left:0;display:none;align-items: center;justify-content: center; z-index:30">
+                                            <img src="images/activity.png" alt="" id="fullImg"
+                                                style="width:50%;height:50%; ">
+                                            <span onclick="closeFullImg()"
+                                                style="position:absolute;top:5%;right:5%;color:#ffffff;">X</span>
+                                        </div>
+                                        <!-- <div class="fullVid " id="fullVidBox" style="width:100%;height:100vh;background:rgba(0, 0, 0, 0.9);position:fixed;top:0;left:0;display:none;align-items: center;justify-content: center; z-index:30">
+                                            <video src="images/meeu.mp4" controls onClick="openFullVid(this.src)"></video>
+                                            <span onclick="closeFullVid()" style="position:absolute;top:5%;right:5%;color:#ffffff;">X</span>
+                                        </div> -->
                                         <div class="container">
                                             <div class="row gutter-y-30">
                                                 <div class="col-xl-3 col-md-6 card "
@@ -868,10 +879,13 @@
                                                         style='--accent-color: #F25334'>
 
                                                         <!-- /.program-one__item__image -->
+
                                                         <div class="program-three__item__content">
 
+
                                                             <img decoding="async" src="images/activity.png"
-                                                                style="height: 270px;">
+                                                                style="height: 270px;" onClick="openFullImg(this.src)">
+
                                                             <!-- /.program-three__item__text -->
                                                         </div>
                                                         <!-- /.program-three__item__content -->
@@ -889,7 +903,7 @@
 
                                                             <img decoding="async" src="images/birthday.png"
                                                                 alt="program-3-2" title="program-3-2"
-                                                                style="height:370px;">
+                                                                style="height:370px;" onClick="openFullImg(this.src)">
                                                         </div>
                                                         <!-- /.program-three__item__content -->
                                                     </div>
@@ -903,7 +917,8 @@
                                                         style='--accent-color: #2390FF'>
 
                                                         <!-- /.program-one__item__image -->
-                                                        <img src="images/kids.png" alt="" style="height:370px">
+                                                        <img src="images/kids.png" alt="" style="height:370px"
+                                                            onClick="openFullImg(this.src)">
                                                         <div class="program-three__item__content">
 
                                                         </div>
@@ -918,7 +933,8 @@
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #FFAA23'>
 
-                                                        <img src="images/lego.png" style="height:370px">
+                                                        <img src="images/lego.png" style="height:370px"
+                                                            onClick="openFullImg(this.src)">
                                                     </div>
                                                     <!-- /.program-three__item__one -->
                                                 </div>
@@ -928,7 +944,13 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #F25334'>
-                                                        <video src="images/cross.mp4" controls></video>
+
+                                                        <a href="images/cross.mp4">
+
+                                                            <video src="images/cross.mp4" controls
+                                                               ></video>
+                                                        </a>
+
                                                         <!-- /.program-three__item__content -->
                                                     </div>
                                                     <!-- /.program-three__item__one -->
@@ -941,7 +963,8 @@
                                                         style='--accent-color: #75C137'>
 
 
-                                                        <video src="images/meeu.mp4" controls></video>
+                                                        <video src="images/meeu.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
 
                                                     </div>
@@ -954,7 +977,8 @@
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #2390FF'>
 
-                                                        <video src="images/vid3.mp4" controls></video>
+                                                        <video src="images/vid3.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
 
                                                     </div>
@@ -967,7 +991,8 @@
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #FFAA23'>
 
-                                                        <video src="images/vid4.mp4" controls></video>
+                                                        <video src="images/vid4.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
 
                                                     </div>
@@ -980,7 +1005,8 @@
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #F25334'>
 
-                                                        <img src="images/oro_motor.png" alt="" style="height:370px;">
+                                                        <img src="images/oro_motor.png" alt="" style="height:370px;"
+                                                            onClick="openFullImg(this.src)">
                                                     </div>
                                                     <!-- /.program-three__item__one -->
                                                 </div>
@@ -990,7 +1016,8 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #75C137'>
-                                                        <img src="images/christmas.png" alt="">
+                                                        <img src="images/christmas.png" alt=""
+                                                            onClick="openFullImg(this.src)">
                                                     </div>
                                                     <!-- /.program-three__item__one -->
                                                 </div>
@@ -1000,7 +1027,8 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #2390FF'>
-                                                        <img src="images/playing.png" alt="" style="height:370px;">
+                                                        <img src="images/playing.png" alt="" style="height:370px;"
+                                                            onClick="openFullImg(this.src)">
                                                     </div>
                                                     <!-- /.program-three__item__one -->
                                                 </div>
@@ -1010,7 +1038,8 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #FFAA23'>
-                                                        <img src="images/fun.png" alt="">
+                                                        <img src="images/fun.png" alt=""
+                                                            onClick="openFullImg(this.src)">
                                                     </div>
                                                     <!-- /.program-three__item__one -->
                                                 </div>
@@ -1021,7 +1050,8 @@
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #F25334'>
 
-                                                        <video src="images/vid5.mp4" controls></video>
+                                                        <video src="images/vid5.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                     </div>
                                                     <!-- /.program-three__item__one -->
@@ -1032,7 +1062,8 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #75C137'>
-                                                        <video src="images/vid17.mp4" controls></video>
+                                                        <video src="images/vid17.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                     </div>
                                                     <!-- /.program-three__item__one -->
@@ -1043,7 +1074,8 @@
                                                     <div class="program-three__item wow fadeInUp"
                                                         data-wow-duration='1500ms' data-wow-delay='00ms'
                                                         style='--accent-color: #2390FF'>
-                                                        <video src="images/vid7.mp4" controls></video>
+                                                        <video src="images/vid7.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                     </div>
                                                     <!-- /.program-three__item__one -->
@@ -1056,7 +1088,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <video src="images/vid8.mp4" controls></video>
+                                                        <video src="images/vid8.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1070,7 +1103,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img9.png" alt="">
+                                                        <img src="images/img9.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1083,7 +1117,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img10.png" alt="">
+                                                        <img src="images/img10.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1096,7 +1131,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img11.png" alt="">
+                                                        <img src="images/img11.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1109,7 +1145,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img12.png" alt="">
+                                                        <img src="images/img12.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1122,7 +1159,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <video src="images/vid9.mp4" controls></video>
+                                                        <video src="images/vid9.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1135,7 +1173,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <video src="images/vid10.mp4" controls></video>
+                                                        <video src="images/vid10.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1148,7 +1187,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <video src="images/vid11.mp4" controls></video>
+                                                        <video src="images/vid11.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1161,7 +1201,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <video src="images/vid12.mp4" controls></video>
+                                                        <video src="images/vid12.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1174,7 +1215,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img13.png" alt="">
+                                                        <img src="images/img13.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1187,7 +1229,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img14.png" alt="">
+                                                        <img src="images/img14.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1200,7 +1243,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img15.png" alt="">
+                                                        <img src="images/img15.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1213,61 +1257,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img16.png" alt="">
-
-                                                        <!-- /.program-three__item__one -->
-                                                    </div>
-                                                </div>
-
-
-                                                <!-- /.program-item -->
-                                                <div class="col-xl-3 col-md-6 card"
-                                                    style="background:transparent; border:0; ">
-                                                    <div class="program-three__item wow fadeInUp"
-                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
-                                                        style='--accent-color: #FFAA23'>
-
-
-                                                        <video src="images/vid13.mp4" controls></video>
-
-                                                        <!-- /.program-three__item__one -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.program-item -->
-                                                <div class="col-xl-3 col-md-6 card"
-                                                    style="background:transparent; border:0; ">
-                                                    <div class="program-three__item wow fadeInUp"
-                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
-                                                        style='--accent-color: #FFAA23'>
-
-
-                                                        <video src="images/vid14.mp4" controls></video>
-
-                                                        <!-- /.program-three__item__one -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.program-item -->
-                                                <div class="col-xl-3 col-md-6 card"
-                                                    style="background:transparent; border:0; ">
-                                                    <div class="program-three__item wow fadeInUp"
-                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
-                                                        style='--accent-color: #FFAA23'>
-
-
-                                                        <video src="images/vid15.mp4" controls></video>
-
-                                                        <!-- /.program-three__item__one -->
-                                                    </div>
-                                                </div>
-                                                <!-- /.program-item -->
-                                                <div class="col-xl-3 col-md-6 card"
-                                                    style="background:transparent; border:0; ">
-                                                    <div class="program-three__item wow fadeInUp"
-                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
-                                                        style='--accent-color: #FFAA23'>
-
-
-                                                        <video src="images/vid16.mp4" controls></video>
+                                                        <img src="images/img16.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1282,7 +1273,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img17.png" alt="">
+                                                        <video src="images/vid13.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1295,7 +1287,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img18.png" alt="">
+                                                        <video src="images/vid14.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1308,7 +1301,8 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img19.png" alt="">
+                                                        <video src="images/vid15.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1321,7 +1315,66 @@
                                                         style='--accent-color: #FFAA23'>
 
 
-                                                        <img src="images/img20.png" alt="">
+                                                        <video src="images/vid16.mp4" controls
+                                                            onClick="openFullVid(this.src)"></video>
+
+                                                        <!-- /.program-three__item__one -->
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- /.program-item -->
+                                                <div class="col-xl-3 col-md-6 card"
+                                                    style="background:transparent; border:0; ">
+                                                    <div class="program-three__item wow fadeInUp"
+                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
+                                                        style='--accent-color: #FFAA23'>
+
+
+                                                        <img src="images/img17.png" alt=""
+                                                            onClick="openFullImg(this.src)">
+
+                                                        <!-- /.program-three__item__one -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.program-item -->
+                                                <div class="col-xl-3 col-md-6 card"
+                                                    style="background:transparent; border:0; ">
+                                                    <div class="program-three__item wow fadeInUp"
+                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
+                                                        style='--accent-color: #FFAA23'>
+
+
+                                                        <img src="images/img18.png" alt=""
+                                                            onClick="openFullImg(this.src)">
+
+                                                        <!-- /.program-three__item__one -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.program-item -->
+                                                <div class="col-xl-3 col-md-6 card"
+                                                    style="background:transparent; border:0; ">
+                                                    <div class="program-three__item wow fadeInUp"
+                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
+                                                        style='--accent-color: #FFAA23'>
+
+
+                                                        <img src="images/img19.png" alt=""
+                                                            onClick="openFullImg(this.src)">
+
+                                                        <!-- /.program-three__item__one -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.program-item -->
+                                                <div class="col-xl-3 col-md-6 card"
+                                                    style="background:transparent; border:0; ">
+                                                    <div class="program-three__item wow fadeInUp"
+                                                        data-wow-duration='1500ms' data-wow-delay='00ms'
+                                                        style='--accent-color: #FFAA23'>
+
+
+                                                        <img src="images/img20.png" alt=""
+                                                            onClick="openFullImg(this.src)">
 
                                                         <!-- /.program-three__item__one -->
                                                     </div>
@@ -1330,7 +1383,7 @@
 
                                             </div>
                                     </section><!-- /.programs-page -->
-                                    <!-- programm -end three  -->
+
                                 </div>
                             </div>
                         </div>
@@ -1604,6 +1657,23 @@
     </div><!-- /.footer-wrapper -->
 
     <div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div>
+    <script>
+        let fullImgBox = document.querySelector("#fullImgBox");
+        let fullImg = document.querySelector("#fullImg");
+
+
+        function openFullImg(picSrc) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = picSrc;
+        }
+
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+
+        }
+
+    </script>
+    <script src="fullscreenImg.js"></script>
     <script type="text/javascript">
         (function () {
             var c = document.body.className;
